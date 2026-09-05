@@ -1,0 +1,77 @@
+configuration {
+    font: "Noto Sans Mono 13";
+    show-icons: false;
+    display-drun: "Applications";
+    drun-display-format: "{name}";
+}
+
+* {
+    bg0: #282c34;
+    bg1: #3a3f4b;
+    fg: #f5f0f5;
+    pink: #f4a6c1;
+    purple: #c7a6ff;
+    red: #f38ba8;
+    blue: #9cc9ff;
+}
+
+window {
+    width: 420px;
+    padding: 28px;
+    border: 1px;
+    border-color: @bg1;
+    border-radius: 22px;
+    background-color: @bg0;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    spacing: 18px;
+    children: [ "inputbar", "listview" ];
+}
+
+inputbar {
+    padding: 10px 14px;
+    border-radius: 14px;
+    background-color: @bg1;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    text-color: @pink;
+    padding: 0 8px 0 0;
+}
+
+entry {
+    text-color: @fg;
+    placeholder: "Choose an option...";
+    placeholder-color: #9aa0aa;
+}
+
+listview {
+    lines: 6;
+    columns: 1;
+    spacing: 7px;
+    fixed-height: false;
+    scrollbar: false;
+}
+
+element {
+    padding: 12px 14px;
+    border-radius: 14px;
+    background-color: transparent;
+}
+
+element normal.normal {
+    text-color: @fg;
+}
+
+element selected.normal {
+    text-color: @bg0;
+    background-color: @pink;
+}
+
+element-text {
+    vertical-align: 0.5;
+}

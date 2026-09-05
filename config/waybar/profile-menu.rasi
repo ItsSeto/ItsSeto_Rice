@@ -1,0 +1,73 @@
+configuration {
+    show-icons: false;
+    disable-history: true;
+}
+
+* {
+    bg:       #282c34;
+    bg-alt:   #3a3f4b;
+    fg:       #f5f0f5;
+    muted:    #9aa0aa;
+    pink:     #f4a6c1;
+    red:      #f38ba8;
+}
+
+window {
+    width: 460px;
+    padding: 30px;
+
+    location: center;
+    anchor: center;
+
+    background-color: @bg;
+
+    border: 1px;
+    border-color: @bg-alt;
+    border-radius: 24px;
+}
+
+mainbox {
+    spacing: 16px;
+    children: [
+        "inputbar",
+        "listview"
+    ];
+}
+
+inputbar {
+    enabled: false;
+}
+
+listview {
+    lines: 5;
+    columns: 2;
+
+    spacing: 10px;
+
+    fixed-height: false;
+    scrollbar: false;
+}
+
+element {
+    padding: 18px 12px;
+
+    border-radius: 14px;
+
+    background-color: @bg-alt;
+}
+
+element-text {
+    font: "Noto Sans Mono 12";
+    text-color: @fg;
+
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+element selected {
+    background-color: @pink;
+}
+
+element selected element-text {
+    text-color: @bg;
+}
