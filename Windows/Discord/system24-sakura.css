@@ -1,0 +1,289 @@
+/**
+ * @name system24-sakura
+ * @description System24 with a soft Sakura pastel-pink color palette.
+ * @author Seto
+ * @version 1.0.0
+ */
+
+/* import System24 */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    /* fonts */
+    --font: 'DM Mono';
+    --code-font: 'DM Mono';
+
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    /* sizes */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    /* animations */
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    /* top bar */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    /* window controls */
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    /* DMs */
+    --custom-dms-icon: off;
+    --dms-icon-svg-url: url('');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-subtle);
+    --dms-icon-color-after: var(--white);
+
+    --custom-dms-background: color;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color:
+        linear-gradient(
+            135deg,
+            var(--pink-2),
+            var(--lavender-2)
+        );
+
+    /* background */
+    --background-image: off;
+    --background-image-url: url('');
+
+    /* transparency */
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    /* user panel */
+    --small-user-panel: on;
+
+    /* corners */
+    --unrounding: on;
+    --round-pfp: off;
+    --remove-pfp-decor: off;
+
+    /* styling */
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+
+    /* labels */
+    --panel-labels: on;
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}
+
+
+/* =========================================================
+   SAKURA PALETTE
+   ========================================================= */
+
+:root {
+    --colors: on;
+
+    /* -----------------------------------------------------
+       TEXT
+       ----------------------------------------------------- */
+
+    /* warm white / cream */
+    --text-0: var(--bg-4);
+    --text-1: oklch(96% 0.018 15);
+    --text-2: oklch(91% 0.025 15);
+    --text-3: oklch(81% 0.035 15);
+    --text-4: oklch(65% 0.035 15);
+    --text-5: oklch(48% 0.035 15);
+
+
+    /* -----------------------------------------------------
+       BACKGROUNDS
+       ----------------------------------------------------- */
+
+    /* deep dusty Sakura pink */
+    --bg-1: oklch(31% 0.035 350);
+    --bg-2: oklch(27% 0.032 350);
+    --bg-3: oklch(23% 0.030 350);
+    --bg-4: oklch(19% 0.027 350);
+
+    /* hover / selection */
+    --hover: oklch(75% 0.080 350 / 0.10);
+    --active: oklch(75% 0.080 350 / 0.18);
+    --active-2: oklch(75% 0.080 350 / 0.26);
+
+    --message-hover: var(--hover);
+
+
+    /* -----------------------------------------------------
+       PRIMARY ACCENT — SAKURA PINK
+       ----------------------------------------------------- */
+
+    --accent-1: var(--pink-1);
+    --accent-2: var(--pink-2);
+    --accent-3: var(--pink-3);
+    --accent-4: var(--pink-4);
+    --accent-5: var(--pink-5);
+
+    --accent-new: var(--pink-3);
+
+
+    /* mentions */
+    --mention:
+        linear-gradient(
+            to right,
+            color-mix(
+                in hsl,
+                var(--pink-2),
+                transparent 90%
+            ) 40%,
+            transparent
+        );
+
+    --mention-hover:
+        linear-gradient(
+            to right,
+            color-mix(
+                in hsl,
+                var(--pink-2),
+                transparent 94%
+            ) 40%,
+            transparent
+        );
+
+
+    /* replies */
+    --reply:
+        linear-gradient(
+            to right,
+            color-mix(
+                in hsl,
+                var(--text-3),
+                transparent 90%
+            ) 40%,
+            transparent
+        );
+
+    --reply-hover:
+        linear-gradient(
+            to right,
+            color-mix(
+                in hsl,
+                var(--text-3),
+                transparent 95%
+            ) 40%,
+            transparent
+        );
+
+
+    /* -----------------------------------------------------
+       STATUS
+       ----------------------------------------------------- */
+
+    --online: var(--green-2);
+    --dnd: var(--pink-4);
+    --idle: var(--yellow-2);
+    --streaming: var(--lavender-2);
+    --offline: var(--text-4);
+
+
+    /* -----------------------------------------------------
+       BORDERS
+       ----------------------------------------------------- */
+
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--pink-2);
+
+    --button-border:
+        oklch(90% 0.04 350 / 0.10);
+
+
+    /* =====================================================
+       SAKURA COLOR FAMILY
+       ===================================================== */
+
+    /* -----------------------------------------------------
+       PINK
+       ----------------------------------------------------- */
+
+    --pink-1: oklch(86% 0.070 350);
+    --pink-2: oklch(80% 0.095 350);
+    --pink-3: oklch(73% 0.115 350);
+    --pink-4: oklch(66% 0.125 350);
+    --pink-5: oklch(58% 0.115 350);
+
+
+    /* -----------------------------------------------------
+       ROSE
+       ----------------------------------------------------- */
+
+    --red-1: oklch(84% 0.070 15);
+    --red-2: oklch(78% 0.095 15);
+    --red-3: oklch(70% 0.115 15);
+    --red-4: oklch(63% 0.120 15);
+    --red-5: oklch(55% 0.105 15);
+
+
+    /* -----------------------------------------------------
+       MATCHA
+       ----------------------------------------------------- */
+
+    --green-1: oklch(84% 0.070 145);
+    --green-2: oklch(77% 0.085 145);
+    --green-3: oklch(69% 0.095 145);
+    --green-4: oklch(61% 0.090 145);
+    --green-5: oklch(53% 0.080 145);
+
+
+    /* -----------------------------------------------------
+       POWDER BLUE
+       ----------------------------------------------------- */
+
+    --blue-1: oklch(85% 0.055 225);
+    --blue-2: oklch(78% 0.075 225);
+    --blue-3: oklch(70% 0.090 225);
+    --blue-4: oklch(62% 0.090 225);
+    --blue-5: oklch(54% 0.080 225);
+
+
+    /* -----------------------------------------------------
+       CREAM / YELLOW
+       ----------------------------------------------------- */
+
+    --yellow-1: oklch(90% 0.075 90);
+    --yellow-2: oklch(84% 0.095 90);
+    --yellow-3: oklch(76% 0.110 90);
+    --yellow-4: oklch(68% 0.105 90);
+    --yellow-5: oklch(60% 0.095 90);
+
+
+    /* -----------------------------------------------------
+       LAVENDER
+       ----------------------------------------------------- */
+
+    --purple-1: oklch(85% 0.065 315);
+    --purple-2: oklch(79% 0.085 315);
+    --purple-3: oklch(72% 0.100 315);
+    --purple-4: oklch(64% 0.100 315);
+    --purple-5: oklch(56% 0.090 315);
+
+
+    /* -----------------------------------------------------
+       EXTRA SAKURA COLOR
+       ----------------------------------------------------- */
+
+    --lavender-1: oklch(86% 0.055 300);
+    --lavender-2: oklch(79% 0.075 300);
+    --lavender-3: oklch(71% 0.090 300);
+    --lavender-4: oklch(63% 0.090 300);
+    --lavender-5: oklch(55% 0.080 300);
+}
